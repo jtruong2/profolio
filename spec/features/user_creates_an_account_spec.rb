@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe "User can create an account" do
   it "manual login" do
-    user = Build(:user)
+    user = build(:user, )
 
     visit root_path
     click_on "Register"
@@ -10,8 +10,8 @@ RSpec.describe "User can create an account" do
     fill_in "user[email]", with: user.email
     fill_in "user[password]", with: user.password
     fill_in "user[password_confirmation]", with: user.password
-    click_on "Signup"
+    click_on "Register"
 
-    expect(page).to have_content("Welcome, #{user.first_name}")
+    expect(page).to have_content("Account successfully created.")
   end
 end
