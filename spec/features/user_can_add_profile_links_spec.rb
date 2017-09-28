@@ -11,11 +11,12 @@ RSpec.describe 'user adds links' do
     fill_in "session[password]", with: 'password'
     click_on "Login"
     click_on "Add Profile"
-    select "Github", from: "profile_select"
+    select "Github", from: "profile[provider]"
     fill_in "profile[link]", with: github.link
     click_on "Add Profile"
 
+    byebug
     expect(page).to have_content("Profile Added.")
-    expect(current_path).to eq(new_profile_path)
+    expect(current_path).to eq(user_profile_new_path(user))
   end
 end
