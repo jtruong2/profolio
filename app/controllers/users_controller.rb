@@ -4,14 +4,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(safe_params)
-    if @user.save
+    user = User.create(safe_params)
+    if user.save
       flash[:success] = "Account successfully created."
-      redirect_to dashboard_path
+      session[:user_id] = user.id
+      redirect_to user_path(user)
     else
       flash[:error] = "Registration failed. Please try again."
       redirect_to new_user_path
     end
+  end
+
+  def show
   end
 
   private
