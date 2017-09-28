@@ -1,6 +1,13 @@
-<%= form_for :session, url: login_path do |f| %>
-  <%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br><br>
-  <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
-  <%= f.submit "Login" %>
-<% end %>
-<em><p>Don't have an account? <%= link_to "Register", new_user_path %><p></em>
+<div class="login">
+  <h1>ProFolio</h1>
+  <div class="jumbotron">
+    <div class="container">
+      <%= form_for :session, url: login_path do |f| %>
+        <%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br><br>
+        <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
+        <%= f.submit "Login" %>
+      <% end %>
+      <em><p>Don't have an account? <%= link_to "Register", new_user_path %><p></em>
+    </div>
+  </div>
+</div>
