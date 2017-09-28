@@ -7,7 +7,6 @@ RSpec.describe "User logs in" do
     fill_in "session[email]", with: user.email
     fill_in "session[password]", with: 'password'
     click_on "Login"
-    save_and_open_page
 
     expect(page).to have_content("Welcome back, #{user.first_name}")
   end

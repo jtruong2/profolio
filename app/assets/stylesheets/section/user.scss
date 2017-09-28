@@ -1,3 +1,16 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.register .jumbotron {
+  position: absolute;
+  left: 37%;
+  top: 30%;
+  width: 30%;
+  height: auto;
+  background-color: #3a526c;
+  border: 2px solid black;
+  border-radius: 20px;
+  p {
+    color: #afc7b1;
+  }
+  .container .btn {
+    background-color: #afc7b1;
+  }
+}

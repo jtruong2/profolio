@@ -1,7 +1,13 @@
-<%= form_for @user do |f| %>
-  <%= f.text_field :first_name, placeholder: "First Name" %><br><br>
-  <%= f.text_field :last_name, placeholder: "Last Name" %><br><br>
-  <%= f.email_field :email, placeholder: "Email Address" %><br><br>
-  <%= f.password_field :password, placeholder: "Password" %><br><br>
-  <%= f.submit :Register %>
-<% end %>
+<div class="register">
+  <div class="jumbotron">
+    <div class="container">
+      <%= form_for @user do |f| %>
+        <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %><br><br>
+        <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %><br><br>
+        <%= f.email_field :email, class: 'form-control', placeholder: "Email Address" %><br><br>
+        <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
+        <center><%= f.submit :Register, class: "btn btn-primary" %></center>
+      <% end %>
+    </div>
+  </div>
+</div>
