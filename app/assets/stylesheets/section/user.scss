@@ -14,3 +14,21 @@
     background-color: #afc7b1;
   }
 }
+.portfolio-show {
+  h1 {
+    text-align: center;
+  }
+  h3 {
+    color: white;
+  }
+  li {
+    color: white;
+  }
+  .btn {
+    background-color: gray;
+  }
+
+  .btn:hover {
+    background-color: lightgray;
+  }
+}

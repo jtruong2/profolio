@@ -1,1 +1,10 @@
-<%= link_to "Add Profile", user_profile_new_path(@user) %>
+<div class="portfolio-show">
+  <h1><%= @user.first_name %>'s ProFolio</h1>
+  <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>
+
+  <% @user.profiles.each do |profile| %>
+    <div class="row">
+      <div class="col-xs-6"><iframe src="<%= profile.link %>"></iframe></div>
+    </div>
+  <% end %>
+</div>
