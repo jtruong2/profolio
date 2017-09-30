@@ -8871,30 +8871,16 @@ button.close {
 }
 
 /* line 1, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
-table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
+.share {
+  text-align: center;
 }
-
-/* line 8, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
-td {
-  border-left: solid 10px #000;
-  padding: 0;
-  margin: 0;
-  width: 0px;
-  height: 10px;
+/* line 2, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
+.share h4 {
+  color: white;
 }
-
-/* line 16, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
-td.black {
-  border-color: #000;
-}
-
-/* line 17, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
-td.white {
-  border-color: #fff;
+/* line 5, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/qrcode.scss */
+.share a {
+  color: white;
 }
 
 /* line 1, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/register.scss */
@@ -8988,24 +8974,22 @@ td.white {
   align-items: center;
   justify-content: center;
 }
-/* line 46, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
-.portfolio-show .icons img {
+/* line 47, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
+.portfolio-show .icons .icon img {
   width: 100px;
   height: auto;
   padding: 12px;
 }
-/* line 52, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
-.portfolio-show .icons img:hover {
+/* line 53, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
+.portfolio-show .icons .icon img:hover {
   width: 120px;
   height: auto;
   padding: 12px;
 }
-/* line 58, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
-.portfolio-show .icons .glyphicon {
-  position: relative;
-  top: -40px;
-  left: -10px;
+/* line 59, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/section/user.scss */
+.portfolio-show .icons .icon .glyphicon {
   color: darkred;
+  float: right;
 }
 
 /* line 18, /Users/jimmytruong/turing/3module/projects/profolio/app/assets/stylesheets/application.scss */
