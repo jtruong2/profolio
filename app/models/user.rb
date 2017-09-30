@@ -11,6 +11,11 @@ class User < ApplicationRecord
   before_save :generate_token
 
   def generate_token
-    self.token = SecureRandom.hex(15)
+    token = SecureRandom.hex(5)
+    if User.find_by(token: token)
+      generate_token
+    else
+      self.token = token
+    end
   end
 end

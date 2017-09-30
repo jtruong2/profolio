@@ -1,16 +1,24 @@
 <div class="portfolio-show">
-  <h1><%= current_user.first_name %>'s ProFolio</h1>
+  <h1><%= @presenter.first_name %>'s ProFolio</h1>
   <div class="selfie">
-    <% if current_user.image == "" %>
+    <% if @presenter.image == "" %>
       <a href="<%= edit_user_path %>"><%= image_tag('default.png') %></a>
     <% else %>
-      <a href="<%= edit_user_path %>"><img src="<%= current_user.image %>"></a>
+      <a href="<%= edit_user_path %>"><img src="<%= @presenter.image %>"></a>
     <% end %>
   </div>
-  <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>
+  <center><%= link_to "Add Profile", user_profile_new_path(current_user), class: 'btn btn-primary' %></center>
   <div class="icons">
-    <% current_user.profiles.each do |profile| %>
-      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a><%= link_to '', user_delete_profile_path(current_user, profile.id), class: 'glyphicon glyphicon-remove' %></a>
+    <% @presenter.profiles.each do |profile| %>
+      <div class="icon">
+        <center><a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a>
+          <%= link_to '', user_delete_profile_path(current_user, profile.id), class: 'glyphicon glyphicon-remove' %>
+        </a></center>
+      </div>
     <% end %>
   </div>
+<div class="share">
+  <h4>Share your ProFolio:</h4>
+  <a href="<%= @presenter.url %>"><%= @presenter.url %></a><br><br>
+  <%= image_tag("/tmp/qrcode.png") %>
 </div>

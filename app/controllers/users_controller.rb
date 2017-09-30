@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @presenter = PortfolioPresenter.new(current_user)
   end
 
   def edit
