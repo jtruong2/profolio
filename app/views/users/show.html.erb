@@ -1,16 +1,16 @@
 <div class="portfolio-show">
-  <h1><%= @user.first_name %>'s ProFolio</h1>
+  <h1><%= current_user.first_name %>'s ProFolio</h1>
   <div class="selfie">
-    <% if @user.image %>
-      <a href="<%= edit_user_path %>"><img src="<%= @user.image %>"></a>
+    <% if current_user.image %>
+      <a href="<%= edit_user_path %>"><img src="<%= current_user.image %>"></a>
     <% else %>
       <a href="<%= edit_user_path %>"><img src="http://www.corporalmente.com.br/wp-content/uploads/2013/10/profile_avatar_default.png"></a>
     <% end %>
   </div>
   <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>
   <div class="icons">
-    <% @user.profiles.each do |profile| %>
-      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a>
+    <% current_user.profiles.each do |profile| %>
+      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a><%= link_to '', user_delete_profile_path(current_user, profile.id), method: :delete, class: 'glyphicon glyphicon-remove' %></a>
     <% end %>
   </div>
 </div>

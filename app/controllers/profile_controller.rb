@@ -16,6 +16,13 @@ class ProfileController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find(params[:user_id])
+    profile = user.profiles.find(params[:id])
+    profile.destroy
+    redirect_to user
+  end
+
 
   private
 
