@@ -1,5 +1,7 @@
 <div class="display-show">
-  <h1><%= @user.first_name %>'s ProFolio</h1>
+  <h1>Welcome to <%= @user.first_name %>'s ProFolio</h1>
+  <h3>Create your own ProFolio <%= link_to "here", root_path %></h3>
+  <p>App designed by Jimmy Truong</h1>
   <div class="selfie">
     <% if @user.image == "" %>
       <%= image_tag('default.png') %>
