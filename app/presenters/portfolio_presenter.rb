@@ -14,6 +14,6 @@ class PortfolioPresenter < BasePresenter
   end
 
   def qrcode(url)
-    QrCode.generate_qr(url)
+    QrCode.new.generate_qr(url)
   end
 end
