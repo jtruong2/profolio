@@ -1,6 +1,14 @@
-<%= form_for [@user, @profile] do |f| %>
-  <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram'], ['Resume'], ['Personal Site'], ['Youtube']] %>
-  <%= f.url_field :link %>
-  <%= f.submit "Add Profile", class: 'btn btn-success' %>
-<% end %>
-<%= link_to "<< Back", user_path(@user), class: "btn btn-default" %>
+<div class="new-profile">
+  <div class="jumbotron">
+    <div class="container">
+      <center>
+        <%= form_for [@user, @profile] do |f| %>
+          <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram'], ['Youtube'], ['Resume'], ['Personal Site']] %>
+          <%= f.url_field :link, class: 'form-control' %>
+          <%= f.submit "Add Profile", class: 'btn btn-success' %>
+        <% end %>
+        <%= link_to "<< Back", user_path(@user), class: "btn btn-default" %>
+      </center>
+    </div>
+  </div>
+</div>

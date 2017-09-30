@@ -1,14 +1,17 @@
 <div class="register">
   <div class="jumbotron">
     <div class="container">
-      <%= form_for @user do |f| %>
-        <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %><br><br>
-        <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %><br><br>
-        <%= f.email_field :email, class: 'form-control', placeholder: "Email Address" %><br><br>
-        <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
-        <%= f.text_field :image, class: 'form-control', placeholder: "Profile Image URL" %>
-        <center><%= f.submit :Register, class: "btn btn-primary" %></center>
-      <% end %>
+      <center>
+        <%= form_for @user do |f| %>
+          <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %><br><br>
+          <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %><br><br>
+          <%= f.email_field :email, class: 'form-control', placeholder: "Email Address" %><br><br>
+          <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
+          <%= f.text_field :image, class: 'form-control', placeholder: "Profile Image URL" %>
+          <%= f.submit :Register, class: "btn btn-primary" %>
+        <% end %>
+        <%= link_to "<< Back", root_path, class: "btn btn-default" %>
+      </center>
     </div>
   </div>
 </div>

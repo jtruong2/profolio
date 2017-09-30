@@ -1,0 +1,21 @@
+.new-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .jumbotron {
+    width: 300px;
+    height: auto;
+    background-color: #3a526c;
+    border: 2px solid black;
+    border-radius: 20px;
+    .container {
+      .btn {
+        background-color: #afc7b1;
+        margin: 5px;
+      }
+      #profile_provider {
+        margin: 10px;
+      }
+    }
+  }
+}

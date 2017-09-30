@@ -24,5 +24,6 @@ class Permission
 
   def guest_permissions
     return true if @controller == "sessions" && @action.in?(%(new create))
+    return true if @controller == "users" && @action.in?(%(new create))
   end
 end
