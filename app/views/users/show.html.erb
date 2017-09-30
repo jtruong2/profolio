@@ -10,7 +10,7 @@
   <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>
   <div class="icons">
     <% current_user.profiles.each do |profile| %>
-      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a><%= link_to '', user_delete_profile_path(current_user, profile.id), method: :delete, class: 'glyphicon glyphicon-remove' %></a>
+      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a><%= link_to '', user_delete_profile_path(current_user, profile.id), class: 'glyphicon glyphicon-remove' %></a>
     <% end %>
   </div>
 </div>

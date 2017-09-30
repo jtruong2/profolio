@@ -15,7 +15,7 @@
   <body>
     <%= render partial: "shared/flash_messages", flash: flash %>
     <% if current_user %>
-      <%= link_to "Logout", logout_path, method: :delete, class: 'btn btn-default' %>
+      <%= link_to "Logout", logout_path, class: 'btn btn-default' %>
     <% end %>
 
     <%= yield %>
