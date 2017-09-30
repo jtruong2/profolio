@@ -1,0 +1,15 @@
+<div class="register">
+  <div class="jumbotron">
+    <div class="container">
+      <%= form_for @user do |f| %>
+        <%= f.text_field :first_name, class: 'form-control', value: @user.first_name, placeholder: "First Name" %><br><br>
+        <%= f.text_field :last_name, class: 'form-control', value: @user.last_name, placeholder: "Last Name" %><br><br>
+        <%= f.email_field :email, class: 'form-control', value: @user.email, placeholder: "Email Address" %><br><br>
+        <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br><br>
+        <%= f.text_field :image, class: 'form-control', value: @user.image, placeholder: "Profile Image URL" %><br>
+        <center><%= f.submit :Update, class: "btn btn-primary" %></center>
+      <% end %>
+    </div><br>
+    <center><%= link_to "<< Go back", user_path(current_user), class: 'btn btn-default' %></center>
+  </div>
+</div>

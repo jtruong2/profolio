@@ -1,5 +1,12 @@
 <div class="portfolio-show">
   <h1><%= @user.first_name %>'s ProFolio</h1>
+  <div class="selfie">
+    <% if @user.image %>
+      <a href="<%= edit_user_path %>"><img src="<%= @user.image %>"></a>
+    <% else %>
+      <a href="<%= edit_user_path %>"><img src="http://www.corporalmente.com.br/wp-content/uploads/2013/10/profile_avatar_default.png"></a>
+    <% end %>
+  </div>
   <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>
   <div class="icons">
     <% @user.profiles.each do |profile| %>

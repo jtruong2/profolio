@@ -7,23 +7,47 @@
   background-color: #3a526c;
   border: 2px solid black;
   border-radius: 20px;
+
   p {
     color: #afc7b1;
   }
+
   .container .btn {
     background-color: #afc7b1;
   }
 }
 .portfolio-show {
+  .selfie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    img {
+      border-radius: 360px;
+      border: 5px solid black;
+      width: 200px;
+      height: auto;
+    }
+    img:hover {
+      border: 5px solid white;
+    }
+  }
+
+
+
   h1 {
     text-align: center;
   }
+
   h3 {
     color: white;
   }
+
   li {
     color: white;
   }
+
   .btn {
     background-color: gray;
   }
@@ -31,15 +55,18 @@
   .btn:hover {
     background-color: lightgray;
   }
+
   .icons {
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
     width: 100px;
     height: auto;
     padding: 12px;
     }
+
     img:hover {
       width: 120px;
       height: auto;

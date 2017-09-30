@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     user = User.create(safe_params)
     if user.save
       flash[:success] = "Account successfully created."
-      session[:user_id] = user.id
+      log_in(user)
       redirect_to user_path(user)
     else
       flash[:error] = "Registration failed. Please try again."
@@ -19,9 +19,24 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    user = User.find(params[:id])
+    if user.update_attributes(safe_params)
+      flash[:success] = 'Updated profile.'
+      redirect_to user_path(user)
+    else
+      flash[:error] = 'Could not update. Try again.'
+      render 'edit'
+    end
+  end
+
   private
 
   def safe_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :image)
   end
 end
