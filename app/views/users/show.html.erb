@@ -1,10 +1,10 @@
 <div class="portfolio-show">
   <h1><%= current_user.first_name %>'s ProFolio</h1>
   <div class="selfie">
-    <% if current_user.image %>
-      <a href="<%= edit_user_path %>"><img src="<%= current_user.image %>"></a>
+    <% if current_user.image == "" %>
+      <a href="<%= edit_user_path %>"><%= image_tag('default.png') %></a>
     <% else %>
-      <a href="<%= edit_user_path %>"><img src="http://www.corporalmente.com.br/wp-content/uploads/2013/10/profile_avatar_default.png"></a>
+      <a href="<%= edit_user_path %>"><img src="<%= current_user.image %>"></a>
     <% end %>
   </div>
   <center><%= link_to "Add Profile", user_profile_new_path(@user), class: 'btn btn-primary' %></center>

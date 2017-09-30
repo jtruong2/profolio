@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get '/profiles/:id', as: 'delete_profile', to: 'profile#destroy'
   end
 
+  get '/display', to: 'display#show'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'

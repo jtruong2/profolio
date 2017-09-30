@@ -1,0 +1,15 @@
+<div class="display-show">
+  <h1><%= @user.first_name %>'s ProFolio</h1>
+  <div class="selfie">
+    <% if @user.image == "" %>
+      <%= image_tag('default.png') %>
+    <% else %>
+      <img src="<%= @user.image %>">
+    <% end %>
+  </div>
+  <div class="icons">
+    <% @user.profiles.each do |profile| %>
+      <a href="<%= profile.link %>" target="_blank"><%= image_tag("#{profile.provider}.png") %></a>
+    <% end %>
+  </div>
+</div>

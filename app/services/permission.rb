@@ -20,10 +20,12 @@ class Permission
     return true if @controller == "sessions" && @action.in?(%w(new create destroy))
     return true if @controller == "users" && @action.in?(%w(new create edit update show destroy))
     return true if @controller == "profile" && @action.in?(%w(new create destroy))
+    return true if @controller == "display" && @action.in?(%(show))
   end
 
   def guest_permissions
     return true if @controller == "sessions" && @action.in?(%(new create))
     return true if @controller == "users" && @action.in?(%(new create))
+    return true if @controller == "display" && @action.in?(%(show))
   end
 end

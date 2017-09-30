@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true
@@ -5,4 +7,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   has_many :profiles
+
+  before_save :generate_token
+
+  def generate_token
+    self.token = SecureRandom.hex(15)
+  end
 end

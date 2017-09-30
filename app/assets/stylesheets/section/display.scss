@@ -1,4 +1,4 @@
-.portfolio-show {
+.display-show {
   .selfie {
     display: flex;
     align-items: center;
@@ -11,33 +11,10 @@
       width: 200px;
       height: auto;
     }
-    img:hover {
-      border: 5px solid white;
-    }
   }
-
-
-
   h1 {
     text-align: center;
   }
-
-  h3 {
-    color: white;
-  }
-
-  li {
-    color: white;
-  }
-
-  .btn {
-    background-color: gray;
-  }
-
-  .btn:hover {
-    background-color: lightgray;
-  }
-
   .icons {
     display: flex;
     align-items: center;
