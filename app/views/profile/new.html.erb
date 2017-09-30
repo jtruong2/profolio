@@ -1,6 +1,6 @@
+<%= link_to "<< Back", user_path(@user), class: "btn btn-primary" %>
 <%= form_for [@user, @profile] do |f| %>
-  <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram']] %>
+  <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram'], ['Resume'], ['Personal Site'], ['Youtube']] %>
   <%= f.url_field :link %>
   <%= f.submit "Add Profile", class: 'btn btn-primary' %>
 <% end %>
-<%= link_to "<< Back", user_path(@user) %>
