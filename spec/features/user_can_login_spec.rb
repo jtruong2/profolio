@@ -9,5 +9,18 @@ RSpec.describe "User logs in" do
     click_on "Login"
 
     expect(page).to have_content("Welcome back, #{user.first_name}")
+    expect(User.all.count).to eq(1)
+  end
+
+  it "logs in with linkedin" do
+    stub_linkedin
+
+    visit root_path
+    within('.linkedin') do
+      click_link
+    end
+
+    expect(page).to have_content("Welcome back, Jimmy")
+    expect(User.all.count).to eq(1)
   end
 end
