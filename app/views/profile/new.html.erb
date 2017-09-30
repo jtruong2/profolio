@@ -3,7 +3,7 @@
     <div class="container">
       <center>
         <%= form_for [@user, @profile] do |f| %>
-          <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram'], ['Youtube'], ['Resume'], ['Personal Site']] %>
+          <%= f.select :provider, [['Github'], ['LinkedIn'], ['Twitter'], ['Facebook'], ['Pinterest'], ['Instagram'], ['Youtube'], ['Heroku'], ['Amazon Web Services'], ['Digital Ocean'], ['Resume'], ['Personal Site']] %>
           <%= f.url_field :link, class: 'form-control' %>
           <%= f.submit "Add Profile", class: 'btn btn-success' %>
         <% end %>
